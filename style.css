@@ -1,19 +1,22 @@
 /* Basinställningar för body */
 body {
   font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column; /* Vi använder column layout för att stapla knappar och kortet */
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full höjd på sidan */
-  margin: 0;
-  background-color: #f0f0f0;
+  background-color: #192734;
+}
+
+.top {
+  font-size: clamp(14px, 5vw, 25px);
+  height: 60px;
+  width: 100vw;
+  text-align: center;
+  margin-bottom: 35px;
+  color:#fff;
 }
 
 /* Styling för spelkortet */
 .card {
-  width: 350px;
-  height: 300px; /* Höjd på kortet */
+  width: clamp(50px, 80vw, 400px);
+  height: clamp(50px, 60vh, 800px);
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -21,27 +24,28 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   box-sizing: border-box;
   margin-bottom: 20px; /* Separerar kortet från knappen under */
 }
 
 /* Styling för påståendet */
 .statement {
-  font-size: 40px; /* Större fontstorlek */
+  font-size: clamp(14px, 10vw, 50px);
   margin-bottom: 20px;
   font-weight: bold;
   color: #333;
   word-wrap: break-word; /* Gör så att långa ord bryts när det inte får plats */
   overflow-wrap: break-word; /* För att säkerställa att långa ord inte går utanför */
   text-overflow: ellipsis; /* Klipper bort text om den är för lång och lägger till "..." */
+  width:95%;
 }
 
 /* Styling för det dolda årtalet */
 .year {
   min-height: 30px; /* Säkerställ att årtalet har en plats även när det är dolt */
   display: none; /* Dölj årtalet tills det behövs */
-  font-size: 40px;
+  font-size: clamp(14px, 20vw, 100px);
   font-weight: bold;
   color: #007BFF;
 }
@@ -93,3 +97,11 @@ body {
   height: 100vh;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  }
