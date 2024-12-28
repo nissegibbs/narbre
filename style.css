@@ -1,0 +1,95 @@
+/* Basinställningar för body */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Vi använder column layout för att stapla knappar och kortet */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full höjd på sidan */
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* Styling för spelkortet */
+.card {
+  width: 350px;
+  height: 300px; /* Höjd på kortet */
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Separerar kortet från knappen under */
+}
+
+/* Styling för påståendet */
+.statement {
+  font-size: 40px; /* Större fontstorlek */
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  word-wrap: break-word; /* Gör så att långa ord bryts när det inte får plats */
+  overflow-wrap: break-word; /* För att säkerställa att långa ord inte går utanför */
+  text-overflow: ellipsis; /* Klipper bort text om den är för lång och lägger till "..." */
+}
+
+/* Styling för det dolda årtalet */
+.year {
+  min-height: 30px; /* Säkerställ att årtalet har en plats även när det är dolt */
+  display: none; /* Dölj årtalet tills det behövs */
+  font-size: 40px;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Styling för knappar */
+.show-year-btn, .new-statement-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Döljer "Generera Nytt Påstående"-knappen tills den behövs */
+#newStatementBtn {
+  margin-top: 20px;
+  background-color: #b0b0b0; /* Gråfärg när knappen är inaktiv */
+  cursor: not-allowed;  /* Förhindrar att man kan klicka på den */
+}
+
+/* Förhindrar att knapparna krymper */
+button {
+  flex-shrink: 0;
+}
+
+/* Hover-effekt för knappar */
+.show-year-btn:hover, .new-statement-btn:hover {
+  background-color: #0056b3;
+}
+
+/* För att separera knapparna ordentligt */
+.show-year-btn {
+  margin-bottom: 20px; /* Skapa mellanrum mellan knappen och kortet */
+}
+
+.new-statement-btn {
+  margin-top: 20px; /* Skapa mellanrum mellan knappen och kortet */
+}
+
+/* För att se till att knapparna inte flyttar sig på andra sätt */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}

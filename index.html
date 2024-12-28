@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelkort med Påstående</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Visa Årtal-knappen är här -->
+    <button class="show-year-btn" id="showYearBtn" onclick="showYear()">Visa Årtal</button>
+
+    <!-- Spelkortet där påståendet är -->
+    <div class="card">
+        <div class="statement" id="statement"></div>
+        <div class="year" id="year"></div>
+    </div>
+
+    <!-- Generera Nytt Påstående-knappen är här -->
+    <button class="new-statement-btn" id="newStatementBtn" onclick="generateNewStatement()" disabled>Generera Nytt Påstående</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
